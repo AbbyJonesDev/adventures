@@ -1,3 +1,12 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'globals';
+
+
+#my_photo {
+  width: rem-calc(200px);
+  -webkit-border-radius: rem-calc(50px);
+  -moz-border-radius: rem-calc(50px);
+  border-radius: rem-calc(50px);
+}

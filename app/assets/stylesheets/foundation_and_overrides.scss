@@ -832,11 +832,15 @@ $header-font-color: $accent-color;
 // $panel-padding: rem-calc(20);
 
 // We use these to set default font colors
-// $panel-font-color: #333;
-// $panel-font-color-alt: #fff;
+// $panel-font-color: $accent-color;
+$panel-font-color-alt: $primary-color-d2;
 
 // $panel-header-adjust: true;
 // $callout-panel-link-color: $primary-color;
+
+.panel > div > h1, .panel > div > h2 {
+  color: $accent-color;
+}
 
 // Pricing Tables
 

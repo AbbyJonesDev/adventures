@@ -12,11 +12,11 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
-
+  <body> 
+  <div class="background-wrapper">
     <header class="row">
-      <h1 class="medium-12 columns text-center">Abby Jones</h1>
-      <h2 class="medium-12 columns text-center"> <small> ...adventure in progress... </small> <h2>
+      <h1 class="text-center">Abby Jones</h1>
+      <h2 class="text-center"> <small> ...adventure in progress... </small> <h2>
       <%= render 'layouts/navigation' %>
     </header>
 
@@ -24,5 +24,6 @@
 
     <%= yield %>
     
+  </div> 
   </body>
 </html>
