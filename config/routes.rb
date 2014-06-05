@@ -1,7 +1,7 @@
 Abbyjones::Application.routes.draw do
   get "/index", to: 'static_pages#home'
-  get "/hats", to: 'static_pages#hats'
-  get "/vita", to: 'static_pages#vita'
+  get "/about", to: 'static_pages#about'
+  get "/resume", to: 'static_pages#resume'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

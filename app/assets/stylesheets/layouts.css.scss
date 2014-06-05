@@ -41,6 +41,8 @@ html {min-height: 100%;}
 
 
 header {
+  margin: rem-calc(-1px);
+  border: rem-calc(1px) solid $secondary-color-l1;
   background-color: $primary-color-l1;
 
   h1, h2 > small {
@@ -52,4 +54,14 @@ section.top-bar-section li {
   border-width: 0 0 0 rem-calc(2px);
   border-color: $primary-color-l1;
   border-style: solid;
+}
+
+.contact {
+  background-color: $primary-color-l2;
+  border: rem-calc(1px) solid $secondary-color-l1;
+
+  .button {
+    // background-color: $secondary-color-l1;
+    margin: rem-calc(15px);
+  }
 }

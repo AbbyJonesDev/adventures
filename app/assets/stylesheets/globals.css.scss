@@ -2,7 +2,7 @@ $include-html-global-classes: false;
 @import "foundation/components/global";
 
 
-// $primary-color: #00A287;
+$primary-color: #00A287;
 $primary-color-d1: #1E796A;
 $primary-color-d2: #006957;
 $primary-color-l1: #34D0B6;
@@ -22,11 +22,16 @@ $accent-color-l2: #FA7081;
 
 .accent-red {
   color: white !important; 
-  background-color: $accent-color-l1;
+  background-color: $accent-color-l2;
   padding: rem-calc(2px);
 }
 
 .secondary-font {
   color: $secondary-color !important;
+  font-weight: bold;
+}
+
+.accent-font {
+  color: $accent-color !important;
   font-weight: bold;
 }

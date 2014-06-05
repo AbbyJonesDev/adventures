@@ -2,9 +2,9 @@ class StaticPagesController < ApplicationController
   def home
   end
 
-  def hats
+  def about
   end
 
-  def vita
+  def resume
   end
 end
