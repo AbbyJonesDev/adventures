@@ -8,11 +8,13 @@ $primary-color-d2: #006957;
 $primary-color-l1: #34D0B6;
 $primary-color-l2: #5ED0BD;
 
+
 $secondary-color: #FFA200;
 $secondary-color-d1: #BF8B30;
 $secondary-color-d2: #A66A00;
 $secondary-color-l1: #FFBA40;
 $secondary-color-l2: #FFCC73;
+
 
 $accent-color: #F5001D;
 $accent-color-d1: #B72E3E;
@@ -20,10 +22,12 @@ $accent-color-d2: #9F0013;
 $accent-color-l1: #FA3E54;
 $accent-color-l2: #FA7081;
 
-.accent-red {
-  color: white !important; 
-  background-color: $accent-color-l2;
-  padding: rem-calc(2px);
+.primary-background {
+  background-color: lighten($primary-color-l1, 8%);
+
+  h1, h2, h3 {
+    color: white;
+  }
 }
 
 .secondary-font {
@@ -31,8 +35,19 @@ $accent-color-l2: #FA7081;
   font-weight: bold;
 }
 
+
+.accent-red {
+  color: white !important; 
+  background-color: $accent-color-l2;
+  padding: rem-calc(2px);
+}
+
 .accent-font {
   color: $accent-color !important;
   font-weight: bold;
 }
 
+.accent-background {
+  background-color: lighten($accent-color-l2, 5%);
+  color: white;
+}
