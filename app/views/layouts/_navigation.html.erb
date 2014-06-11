@@ -11,9 +11,13 @@
     <ul class="right">
       <li><a href="/about"> About </a></li>
       <li><a href="/projects"> Projects </a></li>
-      <li><a href="/blog"> Blog </a></li>
+      <li><%= link_to "Blog", main_blogs_path %></li>
       <li><a href="/omaha"> Omaha </a></li>
       <li><a href="/resume"> Resume </a></li>
+
+      <% if admin_signed_in? %>
+        <li> <%= link_to "Logout", destroy_admin_session_path, method: :delete %> </li>
+      <% end %>
     </ul>
   </section>
 </nav>

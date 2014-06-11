@@ -1,0 +1,15 @@
+<div class="row panel">
+
+  <div class="medium-8 columns">
+    <h2> <%= @blog.title %> </h2>
+    <br>
+    <div> <%= @blog.content.html_safe %> </div>
+
+    <%= link_to 'Back', request.referer %>
+
+  </div>
+
+
+  <%= render 'sidebar' %>
+
+</div>

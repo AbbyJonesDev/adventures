@@ -1,0 +1,43 @@
+  <%= form_for(@blog) do |f| %>
+    <% if @blog.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+        <ul>
+        <% @blog.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content %>
+    <%= f.text_area :content, :class => "tinymce" %>
+
+    <div>
+      <%= f.label :category %> <br>
+      <div class="radio_buttons">
+        <%= f.radio_button("category", "teaching") %>
+        <%= f.label :teaching %> <br>
+        <%= f.radio_button("category", "programming") %>
+        <%= f.label :programming %> <br>
+        <%= f.radio_button("category", "writing") %>
+        <%= f.label :writing %> <br>
+        <%= f.radio_button("category", "general") %>
+        <%= f.label :general %> <br>      
+      </div>
+    </div>
+
+    <%= f.label :tags %>
+    <%= f.text_field :tags %>
+
+    <%= f.label :publish %>
+    <%= f.check_box :publish %>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
