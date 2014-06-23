@@ -5,7 +5,16 @@
 
 
 #workspace {
-  -webkit-border-radius: rem-calc(10px);
-  -moz-border-radius: rem-calc(10px);
-  border-radius: rem-calc(10px);
+  @include photo-border;
+}
+
+.about-me-photos {
+  width: 70%;
+  margin-left: 15%;
+  @include photo-border;
+}
+
+#resume {
+  height: rem-calc(500px);
+  margin-bottom: 10px;
 }

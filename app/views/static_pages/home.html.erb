@@ -1,33 +1,34 @@
 <div class="row panel">
   <div class="medium-8 columns">
     <h1> Welcome </h1>
-    <p> Thanks for visiting.  I hope you'll find some useful information and resources here.  I'm always on a journey to learn and explore new things, and I love helping other people learn, share great resources, and exchange stories through this amazing vehicle of the Internet.</p>
-    <p> Look around to learn more, and please send me an <a href="mailto:abbyjonesdev@gmail.com"> email </a> or a <a href="http://twitter.com/AbbyJones80"> tweet </a> if you want to chat or if there's something I can help you with. </p>
+    <p> Thanks for visiting.  I'm always on a journey to learn and explore new things, and I love helping other people learn, share great resources, and exchange stories through this amazing vehicle of the Internet.  I hope you'll find some useful information and resources here.</p>
+    <!-- <p> Look around to learn more, and please send me an <a href="mailto:abbyjonesdev@gmail.com"> email </a> or a <a href="http://twitter.com/AbbyJones80"> tweet </a> if you have an idea to share or if there's something I can help you with. </p> -->
   </div>
   <div class="medium-4 columns">
     <%= image_tag('workspace.jpg', alt: "Sunlight and fresh air.  A bottle of water.  A notebook and a pen.  And of course a computer.  There's a dog (or two) taking a nap near my feet and a good song playing.  It's my perfect workspace.", :id => "workspace") %>
   <br> <br> 
   </div>
-  <div class="medium-12 columns">
-    <p class="accent-red"> For example, you might have a question like this... </p>
+  <div class="medium-4 columns">
+    <h3 class="accent-red"> Programming </h3>
     <ul>
-      <li class="secondary-font"> Website Questions </li>
-        <ul>
-          <li> How do I start my own website? </li>
-          <li> Who can help me start a website or make my current website better? </li>
-        </ul>
-      <li class="secondary-font"> Coding Questions </li>
-        <ul>
-          <li> What are some options or resources for learning computer programming or web development? </li>
-          <li> Where can I meet other developers or get involved in open source projects? </li>
-        </ul>
-      <li class="secondary-font"> Teaching Questions </li>
-        <ul>
-          <li> What technology or other resources would help my students learn this content/standard better? </li>
-          <li> How can I use the technology I have more effectively in my classroom? </li>
-        </ul>
-    </ul>  
-    <hr>
-    <p class="accent-font text-center"> If you just want to say hello, share a story, or tell me about a cool resource or idea, that's great too.  <br> Hope to hear from you soon.  </p>
+      <li class="secondary-font"><%= link_to "Code Blog", programming_blogs_path, :class => "secondary-link" %></li>
+      <li class="secondary-font"><%= link_to "Code Resources", "#", :class => "secondary-link" %></li>
+    </ul>
   </div>
+  <div class="medium-4 columns">
+    <h3 class="accent-red"> Teaching </h3>  
+    <ul>      
+      <li class="secondary-font"><%= link_to "Teaching Blog", teaching_blogs_path, :class => "secondary-link" %></li>
+      <li class="secondary-font"><%= link_to "Teaching Resources", "#", :class => "secondary-link" %></li>
+    </ul>  
+  </div>
+  <div class="medium-4 columns">
+    <h3 class="accent-red"> Writing </h3>  
+    <ul>      
+      <li class="secondary-font"><%= link_to "Writing Blog", writing_blogs_path, :class => "secondary-link" %></li>
+      <li class="secondary-font"><%= link_to "Writing Resources", "#", :class => "secondary-link" %></li>
+    </ul>  
+  </div>
+    <hr>
+    <p class="accent-font text-center"> If you want to say hello, share a story, or tell me about a cool resource or idea, that's great too.  <br> Hope to hear from you soon.  </p>
 </div>

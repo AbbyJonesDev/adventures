@@ -1,7 +1,7 @@
 $include-html-global-classes: false;
 @import "foundation/components/global";
 
-
+// COLORS
 $primary-color: #00A287;
 $primary-color-d1: #1E796A;
 $primary-color-d2: #006957;
@@ -35,11 +35,25 @@ $accent-color-l2: #FA7081;
   font-weight: bold;
 }
 
+.secondary-link {
+  color: $secondary-color
+}
+
+.secondary-link:hover {
+  color: darken($secondary-color, 10%);
+}
+
+.secondary-background {
+  background-color: $secondary-color-l2;
+  color: $secondary-color-d2;
+  padding: rem-calc(2px), 0;
+
+}
 
 .accent-red {
   color: white !important; 
   background-color: $accent-color-l2;
-  padding: rem-calc(2px);
+  padding: rem-calc(8px);
 }
 
 .accent-font {
@@ -47,9 +61,30 @@ $accent-color-l2: #FA7081;
   font-weight: bold;
 }
 
+.accent-link {
+  color: $accent-color
+}
+
+.accent-link:hover {
+  color: darken($accent-color, 10%);
+}
+
 .accent-background {
   background-color: lighten($accent-color-l2, 5%);
   color: white;
+}
+
+// PHOTOS
+@mixin photo-border {
+  -webkit-border-radius: rem-calc(10px);
+  -moz-border-radius: rem-calc(10px);
+  border-radius: rem-calc(10px);
+}
+
+// GENERAL
+
+.hidden {
+  display: none;
 }
 
 .radio_buttons {
