@@ -1,10 +1,9 @@
 Abbyjones::Application.routes.draw do
+  
   devise_for :admins
   get "/index", to: 'static_pages#home'
   get "/about", to: 'static_pages#about'
   get "/resume", to: 'static_pages#resume'
-  get "/omaha", to: 'static_pages#omaha'
-  get "/projects", to: 'static_pages#projects'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -21,6 +20,16 @@ Abbyjones::Application.routes.draw do
   #   resources :products
 
   resources :blogs do
+    collection do
+      get 'main'
+      get 'teaching'
+      get 'programming'
+      get 'writing'
+      get 'general'
+    end
+  end
+
+  resources :projects do
     collection do
       get 'main'
       get 'teaching'

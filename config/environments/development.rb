@@ -1,6 +1,13 @@
 Abbyjones::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  # Setup logging with unicorn server
+  # From instructions at https://github.com/omahacodeschool/class-agni/wiki/New-Rails-App-Guide
+  config.logger = Logger.new(STDOUT)
+  config.logger.level = Logger.const_get(
+    ENV['LOG_LEVEL'] ? ENV['LOG_LEVEL'].upcase : 'DEBUG'
+  )
+
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -28,4 +35,14 @@ Abbyjones::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Use Amazon Web Services to store Paperclip attachments
+  config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['S3_BUCKET_NAME'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end

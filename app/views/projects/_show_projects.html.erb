@@ -1,0 +1,14 @@
+<br>
+<% @projects.each do |project| %>
+  <div class="row">
+    <%= image_tag project.screenshot.url(:thumb), alt: "#{project.title}", 
+      :class => "medium-3 columns text-center" %>
+    <div class="medium-9 columns">
+      <h3> <%= link_to "#{project.title}", project %> </h3>
+      <p> <%= project.description.html_safe %> </p>
+      <p> Status: <%= project.status %> </p>
+    </div>
+    <br>
+    <hr>
+  </div>
+<% end %>
