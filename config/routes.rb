@@ -39,6 +39,16 @@ Abbyjones::Application.routes.draw do
     end
   end
 
+  resources :resources do
+    collection do
+      get 'main'
+      get 'teaching'
+      get 'programming'
+      get 'writing'
+      get 'general'
+    end
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do
