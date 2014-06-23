@@ -30,6 +30,10 @@ $accent-color-l2: #FA7081;
   }
 }
 
+.primary-font {
+  color: $primary-color !important; 
+}
+
 .secondary-font {
   color: $secondary-color !important;
   font-weight: bold;

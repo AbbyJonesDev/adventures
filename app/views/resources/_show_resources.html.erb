@@ -1,0 +1,12 @@
+<br>
+<% @resources.each do |resource| %>
+  <div class="row">
+    <h3><%= link_to resource.title, resource %> </h3>
+    <p><%= resource.description.html_safe %></p>
+    <p><%= link_to resource.link, resource.link %></p>
+    <br>
+    <p> <em>Tags:</em> <%= resource.tags %> </p>
+    <br>
+    <hr>
+  </div>
+<% end %>

@@ -16,7 +16,7 @@
           <tr>
             <td><%= link_to "#{project.title}", project %></td>
             <td><%= project.category.capitalize %></td>
-            <td><%= project.description.html_safe %></td>
+            <td><%= project.preview.html_safe %></td>
           </tr>
         <% end %>
       </tbody>

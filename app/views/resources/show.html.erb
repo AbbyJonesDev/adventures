@@ -1,24 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="row panel">
+  <div class="medium-8 columns">
+    <h1>
+      <%= @resource.title %>
+    </h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @resource.title %>
-</p>
+    <hr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @resource.description %>
-</p>
+    <p>
+      <%= @resource.description.html_safe %>
+    </p>
 
-<p>
-  <strong>Link:</strong>
-  <%= @resource.link %>
-</p>
+    <p>
+      <%= link_to @resource.link, @resource.link %>
+    </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @resource.category %>
-</p>
+    <p>
+      <strong>Tags:</strong>
+      <%= @resource.tags %>
+    </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
-<%= link_to 'Back', resources_path %>
+    <p>
+      <strong>Category:</strong>
+      <%= @resource.category.capitalize %>
+    </p>
+
+    <%= link_to 'Back', request.referer %>
+
+    <% if current_admin %>
+      <%= link_to 'Edit', edit_resource_path(@resource) %>
+    <% end %>
+  </div>
+
+  <%= render 'sidebar' %>
+</div>

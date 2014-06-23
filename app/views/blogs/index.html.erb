@@ -17,7 +17,7 @@
         <% @blogs.each do |blog| %>
           <tr>
             <td><%= link_to "#{blog.title}", blog %></td>
-            <td><%= blog.category %></td>
+            <td><%= blog.category.capitalize %></td>
             <td><%= blog.tags %></td>
             <td><%= blog.updated_at.strftime('%D') || blog.created_at.strftime('%D') %></td>
             <td><%= blog.preview.html_safe %></td>
