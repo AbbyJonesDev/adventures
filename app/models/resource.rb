@@ -1,4 +1,6 @@
 class Resource < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: :slugged
 
   def preview
     words = self.description.split(' ')

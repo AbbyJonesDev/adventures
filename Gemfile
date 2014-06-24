@@ -42,6 +42,8 @@ gem 'devise'
 # Use tinyMCE to add rich text editor for blog posts
 gem 'tinymce-rails'
 
+# Use FriendlyID to generate SEO friendly URL's
+gem 'friendly_id'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
