@@ -6,6 +6,9 @@ gem 'rails', '4.0.4'
 # Use Postgresql as the database for Active Record
 gem 'pg'
 
+# Use New Relic for monitoring
+gem 'newrelic_rpm'
+
 # Use Figaro to load ENV variables for given environment
 gem 'figaro'
 
