@@ -819,7 +819,7 @@ $header-font-color: $accent-color;
 // $include-html-panel-classes: $include-html-classes;
 
 // We use these to control the background and border styles
-// $panel-bg: scale-color(#fff, $lightness: -5%);
+$panel-bg: white;
 // $panel-border-style: solid;
 // $panel-border-size: 1px;
 
@@ -1094,16 +1094,16 @@ $panel-font-color-alt: $primary-color-d2;
 // $include-html-table-classes: $include-html-classes;
 
 // These control the background color for the table and even rows
-// $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9  ;
+$table-bg: lighten($secondary-color-l2, 20%);
+$table-even-row-bg: lighten($secondary-color-l2, 10%);
 
 // These control the table cell border style
 // $table-border-style: solid;
 // $table-border-size: 1px;
-// $table-border-color: #ddd;
+$table-border-color: $secondary-color-d2;
 
 // These control the table head styles
-// $table-head-bg: #f5f5f5  ;
+$table-head-bg: $secondary-color-l2;
 // $table-head-font-size: rem-calc(14);
 // $table-head-font-color: #222;
 // $table-head-font-weight: bold;
