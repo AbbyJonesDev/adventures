@@ -1,7 +1,7 @@
 <br>
 <% @projects.each do |project| %>
   <div class="row">
-    <%= image_tag project.screenshot.url(:thumb), alt: "#{project.title}", 
+    <%= image_tag project.screenshot.url(:medium), alt: "#{project.title}", 
       :class => "medium-4 columns text-center" %>
     <div class="medium-8 columns">
       <h3> <%= link_to "#{project.title}", project %> </h3>
