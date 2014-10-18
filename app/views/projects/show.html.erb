@@ -1,9 +1,11 @@
 <div class="row panel">
   <div class="medium-8 columns">
     <h1> Project: <%= @project.title %> </h1>
-      <%= image_tag @project.screenshot.url, alt: "#{@project.title} screenshot" %>
+      <% if @project.screenshot_file_name != nil %>
+        <%= image_tag @project.screenshot.url, alt: "#{@project.title} screenshot" %>
+      <% end %>
       <p> <%= @project.description.html_safe %> </p>
-      <p> <%= link_to @project.link %> </p>
+      <p> <%= link_to "#{@project.link}", @project.link %> </p>
       <p> Category: <%= @project.category.capitalize %> </p>
     <br>
     <%= link_to 'Back', request.referer %>
