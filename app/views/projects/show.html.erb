@@ -3,9 +3,7 @@
     <h1> Project: <%= @project.title %> </h1>
       <%= image_tag @project.screenshot.url, alt: "#{@project.title} screenshot" %>
       <p> <%= @project.description.html_safe %> </p>
-      <p> Date: <%= @project.date %> </p>
-      <p> Link: <%= @project.link %> </p>
-      <p> Status: <%= @project.status %> </p>
+      <p> <%= link_to @project.link %> </p>
       <p> Category: <%= @project.category.capitalize %> </p>
     <br>
     <%= link_to 'Back', request.referer %>
