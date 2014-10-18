@@ -3,29 +3,29 @@ class ProjectsController < ApplicationController
   before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
   def main
-    @projects = Project.order(created_at: :desc).limit(3)
+    @projects = Project.order(date: :desc).limit(3)
   end
 
   def teaching
-    @projects = Project.where(category: "teaching")
+    @projects = Project.where(category: "teaching").order(date: :desc)
   end
 
   def programming
-    @projects = Project.where(category: "programming")
+    @projects = Project.where(category: "programming").order(date: :desc)
   end
 
   def writing
-    @projects = Project.where(category: "writing")
+    @projects = Project.where(category: "writing").order(date: :desc)
   end
 
   def general
-    @projects = Project.where(category: "general")
+    @projects = Project.where(category: "general").order(date: :desc)
   end
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = Project.order(date: :desc)
   end
 
   # GET /projects/1
