@@ -9,5 +9,10 @@
     <li> <%= link_to "All",  main_projects_path %> </li>        
   </ul>
 
+  <% if admin_signed_in? %>
+    <hr>
+    <%= link_to "Create New", new_project_path, :class => "button" %>
+  <% end %>
+
 
 </div>

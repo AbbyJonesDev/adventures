@@ -33,6 +33,11 @@
         <a href="http://github.com/AbbyJonesDev" class="button small radius"> GitHub </a>
         <a href="http://www.linkedin.com/pub/abigail-jones/60/1a8/230/" class="button small radius"> LinkedIn </a> 
       </div>
+      <div class="row">
+        <% unless admin_signed_in? %>
+          <%= link_to "Login", new_admin_session_path %>
+        <% end %>
+      </div>
     </footer>
 
   </div> <!-- Background wrapper -->

@@ -1,0 +1,6 @@
+<% if admin_signed_in? %>
+  <br><br>
+  <%= link_to "Edit", url_for(controller: controller, action: "edit") %>
+  <br>
+  <%= link_to "Delete", url_for(controller: controller, action: "show"), method: "delete", confirm: "Are you sure?" %>
+<% end %>

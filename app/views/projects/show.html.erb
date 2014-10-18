@@ -9,11 +9,12 @@
       <p> Category: <%= @project.category.capitalize %> </p>
     <br>
     <%= link_to 'Back', request.referer %>
-    <br>
-    <% if current_admin %>
-      <%= link_to 'Edit', edit_project_path(@project) %>
-    <% end %>
+
+    <%= render partial: "shared/admin_links", 
+               locals: { controller: "projects", resource: @project } %>
+
   </div>
+
 
   <%= render 'sidebar' %>
 </div>

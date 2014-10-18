@@ -7,9 +7,11 @@
 
     <%= link_to 'Back', request.referer %>
 
+    <%= render partial: "shared/admin_links", 
+               locals: { controller: "blogs", resource: @blog } %>    
+
   </div>
-
-
+  
   <%= render 'sidebar' %>
 
 </div>
