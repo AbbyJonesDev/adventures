@@ -4,34 +4,36 @@ class BlogsController < ApplicationController
 
   # GET /blogs/main
   def main
-    @blogs = Blog.order(created_at: :desc).limit(3)
+    @blogs = Blog.most_recent(current_admin)
   end
 
   def teaching
-    @blogs = Blog.where(category: "teaching")
+    @blogs = Blog.by_category("teaching", current_admin)
   end
 
   def programming
-    @blogs = Blog.where(category: "programming")
+    @blogs = Blog.by_category("programming", current_admin)
   end
 
   def writing
-    @blogs = Blog.where(category: "writing")
+    @blogs = Blog.by_category("writing", current_admin)
   end
 
   def general
-    @blogs = Blog.where(category: "general")
+    @blogs = Blog.by_category("general", current_admin)
   end
 
   # GET /blogs
-  # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.index(current_admin)
   end
 
   # GET /blogs/1
-  # GET /blogs/1.json
   def show
+    if @blog.publish == false && current_admin == nil
+      flash[:notice] = "The article you were looking for is not available"
+      redirect_to main_blogs_path
+    end
   end
 
   # GET /blogs/new
