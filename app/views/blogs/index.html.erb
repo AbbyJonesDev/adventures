@@ -1,29 +1,10 @@
 <div class="row panel">
-  <div class="medium-12 columns">
+  
+  <div class="medium-8 columns">
     <h1>All Posts</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Category</th>
-          <th>Tags</th>
-          <th>Date</th>
-          <th>Preview</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @blogs.each do |blog| %>
-          <tr>
-            <td><%= link_to "#{blog.title}", blog %></td>
-            <td><%= blog.category.capitalize %></td>
-            <td><%= blog.tags %></td>
-            <td><%= blog.updated_at.strftime('%D') || blog.created_at.strftime('%D') %></td>
-            <td><%= blog.preview.html_safe %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <%= render "previews" %>
   </div>
+
+  <%= render "sidebar" %>
+
 </div>
