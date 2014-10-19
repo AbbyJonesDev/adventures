@@ -10,9 +10,9 @@ class Blog < ActiveRecord::Base
 
   def self.index(admin=nil)
     if admin
-      @blogs = Blog.all
+      @blogs = Blog.order(created_at: :desc)
     else
-      @blogs = Blog.published(true)
+      @blogs = Blog.order(created_at: :desc).where(publish: true)
     end
   end
 

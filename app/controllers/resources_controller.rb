@@ -26,7 +26,7 @@ class ResourcesController < ApplicationController
   # GET /resources
   # GET /resources.json
   def index
-    @resources = Resource.all
+    @resources = Resource.order(created_at: :desc)
   end
 
   # GET /resources/1
