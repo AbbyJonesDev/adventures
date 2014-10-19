@@ -7,28 +7,28 @@
     <%= image_tag('workspace.jpg', alt: "Sunlight and fresh air.  A bottle of water.  A notebook and a pen.  And of course a computer.  There's a dog (or two) taking a nap near my feet and a good song playing.  It's my perfect workspace.", :id => "workspace") %>
   <br> <br> 
   </div>
+
   <div class="medium-4 columns">
-    <h3 class="accent-red"> Programming </h3>
-    <ul>
-      <li class="secondary-font"><%= link_to "Programming Blog", programming_blogs_path, :class => "secondary-link" %></li>
-      <li class="secondary-font"><%= link_to "Programming Resources", programming_resources_path, :class => "secondary-link" %></li>
-    </ul>
+    <!-- Latest Blog Post -->
+    <h3 class="accent-red"> Recent Blogs </h3>
+    <%= render "blogs/previews" %>
   </div>
-  <br>
+
   <div class="medium-4 columns">
-    <h3 class="accent-red"> Teaching </h3>  
-    <ul>      
-      <li class="secondary-font"><%= link_to "Teaching Blog", teaching_blogs_path, :class => "secondary-link" %></li>
-      <li class="secondary-font"><%= link_to "Teaching Resources", teaching_resources_path, :class => "secondary-link" %></li>
-    </ul>  
+    <!-- Twitter Feed -->
+    <h3 class="accent-red"> Tweets </h3>
+    <a class="twitter-timeline"  href="https://twitter.com/AbbyJones80" data-widget-id="523606173816061953">Tweets by @AbbyJones80</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
   </div>
-  <div class="medium-4 columns">
-    <h3 class="accent-red"> Writing </h3>  
-    <ul>      
-      <li class="secondary-font"><%= link_to "Writing Blog", writing_blogs_path, :class => "secondary-link" %></li>
-      <li class="secondary-font"><%= link_to "Writing Resources", writing_resources_path, :class => "secondary-link" %></li>
-    </ul>  
-  </div>
+
+  <div class="medium-4 columns"> 
+    <h3 class="accent-red"> Soundtrack </h3>
+    <p> (Free Spotify account required to play tracks. My apologies for any inconvenience.) </p>
+    <iframe src="https://embed.spotify.com/?uri=spotify:user:1250146840:playlist:21VxgLP97my3HrfgC6LADj&theme=white" width="290" height="380" frameborder="0" allowtransparency="true"></iframe>
     <hr>
-    <p class="accent-font text-center"> If you want to say hello, share a story, or tell me about a cool resource or idea, that's great too.  <br> Hope to hear from you soon.  </p>
+    <h3 class="accent-red"> Photos </h3>
+    <!-- www.intagme.com -->
+    <iframe src="http://www.intagme.com/in/?u=YWJieWpvbmVzODB8c2x8MzAwfDJ8M3x8eWVzfDV8dW5kZWZpbmVkfHllcw==" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:290px; height: 290px" ></iframe>  
+  </div>
+
 </div>
