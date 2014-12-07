@@ -26,9 +26,9 @@ class Blog < ActiveRecord::Base
 
   def self.by_category(category, admin=nil)
     if admin
-      @blogs = Blog.where(category: category)
+      @blogs = Blog.where(category: category).order(created_at: :desc)
     else
-      @blogs = Blog.where(category: category).published(true)
+      @blogs = Blog.where(category: category).published(true).order(created_at: :desc)
     end
   end
 
