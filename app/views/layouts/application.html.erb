@@ -9,13 +9,15 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+
+    <%= render 'layouts/ga' %> 
   </head>
 
   <body> 
   <div class="background-wrapper">
     <header class="row">
       <h1 class="text-center">Abby Jones</h1>
-      <h2 class="text-center"> <small> ...adventure in progress... </small> <h2>
+      <h2 class="text-center"> <small> ...adventure in progress... </small> </h2>
       <%= render 'layouts/navigation' %>
     </header>
 
@@ -26,10 +28,15 @@
 
     <footer>
       <div class="row contact text-center">
-        <a href="mailto:abbyjonesdev@gmail.com" class="button small radius"> Email </a>
+        <a href="mailto:contact@abbyjones.net" class="button small radius"> Email </a>
         <a href="http://twitter.com/AbbyJones80" class="button small radius"> Twitter </a>
         <a href="http://github.com/AbbyJonesDev" class="button small radius"> GitHub </a>
         <a href="http://www.linkedin.com/pub/abigail-jones/60/1a8/230/" class="button small radius"> LinkedIn </a> 
+      </div>
+      <div class="row">
+        <% unless admin_signed_in? %>
+          <%= link_to "Login", new_admin_session_path %>
+        <% end %>
       </div>
     </footer>
 

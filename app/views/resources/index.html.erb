@@ -1,34 +1,13 @@
 <div class="row panel">
-  <div class="medium-12 columns">
+  <div class="medium-8 columns">
     <h1>Resource Index</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Title</th>
-          <th>Description</th>
-          <th>Link</th>
-          <th>Category</th>
-          <th>Tags</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @resources.each do |resource| %>
-          <tr>
-            <td><%= link_to resource.title, resource %></td>
-            <td><%= resource.preview.html_safe %></td>
-            <td><%= link_to resource.link, resource.link %></td>
-            <td><%= resource.category.capitalize %></td>
-            <td><%= resource.tags %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <%= render "show_resources" %> 
+    
+    <% if current_admin %>
+      <br>
+      <%= link_to 'New Resource', new_resource_path %>
+    <% end %>
   </div>
-
-  <br>
-  <% if current_admin %>
-    <%= link_to 'New Resource', new_resource_path %>
-  <% end %>
+  
+  <%= render "sidebar" %>
 </div>

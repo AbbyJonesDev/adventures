@@ -80,9 +80,7 @@ $accent-color-l2: #FA7081;
 
 // PHOTOS
 @mixin photo-border {
-  -webkit-border-radius: rem-calc(10px);
-  -moz-border-radius: rem-calc(10px);
-  border-radius: rem-calc(10px);
+  border: rem-calc(2px) solid $secondary-color-l1;
 }
 
 // GENERAL

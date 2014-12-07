@@ -9,5 +9,10 @@
     <li> <%= link_to "All",  blogs_path %> </li>        
   </ul>
 
+  <% if admin_signed_in? %>
+    <hr>
+    <%= link_to "Create New", new_blog_path, :class => "button" %>
+  <% end %>
+
 
 </div>

@@ -1,19 +1,20 @@
 <div class="row panel">
   <div class="medium-8 columns">
     <h1> Project: <%= @project.title %> </h1>
-      <%= image_tag @project.screenshot.url, alt: "#{@project.title} screenshot" %>
+      <% if @project.screenshot_file_name != nil %>
+        <%= image_tag @project.screenshot.url, alt: "#{@project.title} screenshot" %>
+      <% end %>
       <p> <%= @project.description.html_safe %> </p>
-      <p> Date: <%= @project.date %> </p>
-      <p> Link: <%= @project.link %> </p>
-      <p> Status: <%= @project.status %> </p>
+      <p> <%= link_to "#{@project.link}", @project.link %> </p>
       <p> Category: <%= @project.category.capitalize %> </p>
     <br>
     <%= link_to 'Back', request.referer %>
-    <br>
-    <% if current_admin %>
-      <%= link_to 'Edit', edit_project_path(@project) %>
-    <% end %>
+
+    <%= render partial: "shared/admin_links", 
+               locals: { controller: "projects", resource: @project } %>
+
   </div>
+
 
   <%= render 'sidebar' %>
 </div>
