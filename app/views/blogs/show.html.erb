@@ -3,8 +3,9 @@
   <div class="medium-8 columns">
     <h2> <%= @blog.title %> </h2>
     <br>
-    <div> <%= @blog.content.html_safe %> </div>
+    <!-- <div> <%= @blog.content.html_safe %> </div> -->
 
+    <div> <%= markdown @blog.content %> </div>
     <%= link_to 'Back', request.referer %>
 
     <%= render partial: "shared/admin_links", 

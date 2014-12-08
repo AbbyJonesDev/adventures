@@ -45,6 +45,11 @@ gem 'devise'
 # Use tinyMCE to add rich text editor for blog posts
 gem 'tinymce-rails'
 
+# Use Redcarpet to parse Markdown files
+gem 'redcarpet'
+# Use Rouge for syntax highlighting
+gem 'rouge'
+
 # Use FriendlyID to generate SEO friendly URL's
 gem 'friendly_id'
 

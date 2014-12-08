@@ -143,6 +143,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    redcarpet (3.0.0)
+    rouge (1.7.4)
     rspec-core (3.0.0)
       rspec-support (~> 3.0.0)
     rspec-expectations (3.0.0)
@@ -237,6 +239,8 @@ DEPENDENCIES
   pg
   rails (= 4.0.4)
   rails_12factor
+  redcarpet
+  rouge
   rspec-rails (~> 3.0.0.beta)
   sass-rails (~> 4.0.2)
   sdoc
