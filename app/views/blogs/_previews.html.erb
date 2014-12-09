@@ -1,7 +1,7 @@
 <br>
 <% @blogs.each do |blog| %>
   <h3> <%= link_to "#{blog.title}", blog %> </h3>
-  <p> <%= blog.preview.html_safe %> </p>
+  <p> <%= markdown blog.preview %> </p>
   <%= link_to "More...", blog %>
   <br>
   <hr>

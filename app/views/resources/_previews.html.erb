@@ -1,7 +1,7 @@
 <br>
 <% @resources.each do |resource| %>
   <h3> <%= link_to "#{resource.title}", resource %> </h3>
-  <p> <%= resource.preview.html_safe %> </p>
+  <p> <%= markdown resource.preview %> </p>
   <%= link_to "More...", resource %>
   <br>
   <hr>
